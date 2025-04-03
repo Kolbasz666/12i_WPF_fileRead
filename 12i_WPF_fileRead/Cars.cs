@@ -27,5 +27,12 @@ namespace _12i_WPF_fileRead
             Power = int.Parse(temp[2]);
             Weight = int.Parse(temp[3]);
         }
+        public Cars(string Man, string Mod, int Pow, int Wei)
+        {
+            Manufacturer = Man;
+            Model = Mod;
+            Power = Pow;
+            Weight = Wei;
+        }
     }
 }

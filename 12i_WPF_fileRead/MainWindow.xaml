@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel Name="everything" Background="Lime"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Name="everything" Background="Lime" Grid.Column="2" Grid.RowSpan="5"/>
+        <Label Content="Gyártó:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30"
+               Grid.Row="0"/>
+        <TextBox Background="AliceBlue" Grid.Column="1" Margin="20 10" Padding="5" Grid.Row="0" Name="ManufacturerInput"/>
+        <Label Content="Modell:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Grid.Row="1"/>
+        <TextBox Background="AliceBlue" Grid.Column="1" Margin="20 10" Padding="5" Grid.Row="1" Name="ModelInput"/>
+        <Label Content="Teljesítmény (hp):" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Grid.Row="2"/>
+        <TextBox Background="AliceBlue" Grid.Column="1" Margin="20 10" Padding="5" Grid.Row="2" Name="PowerInput"/>
+        <Label Content="Súly (kg):" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Grid.Row="3"/>
+        <TextBox Background="AliceBlue" Grid.Column="1" Margin="20 10" Padding="5" Grid.Row="3" Name="WeightInput"/>
+        <Button Grid.Row="4" Grid.Column="0" Content="Létrehozás" FontSize="30" Click="CreateEvent" Name="CreateButton"/>
+        <Button Grid.Row="4" Grid.Column="1" Content="Módosítás" FontSize="30" Click="EditEvent" Name="EditButton" IsEnabled="False"/>
     </Grid>
 </Window>
