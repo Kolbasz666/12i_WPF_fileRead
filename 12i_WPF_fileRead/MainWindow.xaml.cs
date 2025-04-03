@@ -28,6 +28,7 @@ namespace _12i_WPF_fileRead
             InitializeComponent();
             file = new FileManager("data.txt");
             Start();
+            masik();
         }
         void Start()
         {
@@ -39,7 +40,64 @@ namespace _12i_WPF_fileRead
                 oneLabel.MouseLeftButtonUp += CarClick;
                 oneLabel.MouseRightButtonUp += EditClick;
                 everything.Children.Add(oneLabel);
+                
             }
+        }
+        void masik()
+        {
+            List<epito______anyag> asd = new List<epito______anyag>();
+            asd.Add(new fa {
+                faAnyag= "Tolgyyyyyyyyyyyy",
+                kemenyseg = 5f,
+                suly = 30.25,
+                nev = "Tölgy fa",
+                ar = 1795,
+            });
+            asd.Add(new vas
+            {
+                femtipus = "Rozsdás acél",
+                suruseg = 5f,
+                suly = 15000.25,
+                nev = "BMW",
+                ar = 1500000,
+            });
+            asd.Add(new tegla
+            {
+                tipus = "Tört tégla",
+                szin = "kék",
+                suly = 50.25,
+                nev = "Kékes lilás tört tégla",
+                ar = 380000,
+            });
+
+            //foreach (epito______anyag item in asd)
+            //{
+            //    if(item is fa)
+            //    {
+            //        MessageBox.Show("Szereti a : "+ (item as fa).faAnyag );
+
+            //    }else if(item is vas)
+            //    {
+            //        MessageBox.Show("Zsd: " + (item as vas).femtipus);
+            //    }else if(item is tegla)
+            //    {
+            //        MessageBox.Show("Szabi: " + (item as tegla).tipus);
+            //    }
+            //    item.ar += 50;
+            //}
+            List<object> asdd = new List<object>();
+
+            asdd.Add(10);
+            asdd.Add("kolbasz666");
+            asdd.Add(true);
+            asdd.Add('c');
+            asdd.Add(66.666666);
+            asdd.Add(new TextBox());
+            asdd.Add(new Label()
+            {
+                Content = "Kubinyi 1-es",
+            });
+
         }
         void EditClick(object s, EventArgs e)
         {
